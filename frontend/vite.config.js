@@ -16,6 +16,15 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: false,
+    cssCodeSplit: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          charts: ['chart.js', 'react-chartjs-2'],
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+        },
+      },
+    },
   }
 })

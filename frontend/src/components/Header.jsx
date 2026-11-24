@@ -46,6 +46,7 @@ const Header = ({ onMenuClick }) => {
           {/* Mobile menu button */}
           <button
             onClick={onMenuClick}
+            aria-label="Open navigation menu"
             className="lg:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
           >
             <Menu className="h-6 w-6" />
@@ -60,6 +61,7 @@ const Header = ({ onMenuClick }) => {
         <div className="flex items-center space-x-4">
           {/* Notifications */}
           <button className="p-2 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full">
+            <span className="sr-only">Notifications</span>
             <Bell className="h-6 w-6" />
           </button>
 
@@ -67,6 +69,8 @@ const Header = ({ onMenuClick }) => {
           <div className="relative">
             <button
               onClick={() => setShowUserMenu(!showUserMenu)}
+              aria-label="Open user menu"
+              aria-expanded={showUserMenu}
               className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
               <div className="h-8 w-8 bg-primary-100 rounded-full flex items-center justify-center">

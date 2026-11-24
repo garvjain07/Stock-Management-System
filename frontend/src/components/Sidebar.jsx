@@ -8,7 +8,6 @@ import {
   BarChart3, 
   Settings,
   X,
-  Store,
   ShoppingCart,
   UserCheck,
   Phone,
@@ -129,16 +128,21 @@ const Sidebar = ({ isOpen, onClose }) => {
         isOpen ? 'translate-x-0' : 'lg:translate-x-0 -translate-x-full'
       )}>
         <div className="flex items-center justify-between h-16 px-6 bg-primary-600">
-          <div className="flex items-center">
-            <Store className="h-8 w-8 text-white" />
-            <span className="ml-2 text-xl font-semibold text-white">
-              StockMS
-            </span>
-          </div>
+          <Link to="/dashboard" className="flex items-center" aria-label="Stock Management System dashboard">
+            <img
+              src="/stock-logo.png"
+              alt=""
+              width="422"
+              height="372"
+              className="h-12 w-auto object-contain"
+              decoding="async"
+            />
+          </Link>
           
           {/* Close button for mobile */}
           <button
             onClick={onClose}
+            aria-label="Close navigation menu"
             className="lg:hidden text-white hover:text-gray-200"
           >
             <X className="h-6 w-6" />

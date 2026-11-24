@@ -6,6 +6,14 @@
   body {
     @apply font-sans antialiased;
   }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+  }
 }
 
 @layer components {

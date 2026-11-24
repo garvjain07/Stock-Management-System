@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
-import { Eye, EyeOff, Store, LogIn } from 'lucide-react'
+import { Eye, EyeOff, LogIn } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 import LoadingSpinner from '../components/LoadingSpinner'
 
@@ -45,12 +45,15 @@ const Login = () => {
         <div>
           {/* Logo */}
           <div className="flex justify-center">
-            <div className="flex items-center space-x-2">
-              <div className="h-12 w-12 bg-primary-600 rounded-lg flex items-center justify-center">
-                <Store className="h-8 w-8 text-white" />
-              </div>
-              <span className="text-2xl font-bold text-gray-900">StockMS</span>
-            </div>
+            <img
+              src="/stock-logo.png"
+              alt="Stock Management System"
+              width="422"
+              height="372"
+              className="h-auto w-56 max-w-full"
+              decoding="async"
+              fetchPriority="high"
+            />
           </div>
           
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -109,6 +112,7 @@ const Login = () => {
                 />
                 <button
                   type="button"
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
                   className="absolute inset-y-0 right-0 pr-3 flex items-center"
                   onClick={() => setShowPassword(!showPassword)}
                 >
