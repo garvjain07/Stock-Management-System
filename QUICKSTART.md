@@ -158,3 +158,4 @@ Your Stock Management System is now:
 **Need help?** Check the detailed guides:
 - [DEPLOYMENT.md](./DEPLOYMENT.md)
 - [ENV_VARIABLES.md](./ENV_VARIABLES.md)
+
