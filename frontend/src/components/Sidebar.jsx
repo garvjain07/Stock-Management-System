@@ -134,9 +134,12 @@ const Sidebar = ({ isOpen, onClose }) => {
               alt=""
               width="422"
               height="372"
-              className="h-12 w-auto object-contain"
+              className="h-10 w-auto object-contain"
               decoding="async"
             />
+            <span className="ml-2 text-lg font-semibold text-white">
+              StockMS
+            </span>
           </Link>
           
           {/* Close button for mobile */}
